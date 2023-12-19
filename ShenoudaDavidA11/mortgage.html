@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="main.css">
+
+
+    <title>Financial Calculator</title>
+    <!--
+    Author: David Shenouda   
+    Date: 11/10/2021
+    Assignment 11
+    -->
+
+
+<body>
+    <header>
+        <h1>Financial Calculator</h1>
+    </header>
+    <form name="fincalc">
+        <fieldset>
+
+            <legend>Explanation</legend>
+            <p>Enter the amount of the mortgage, change the yearly interest rates in percentage if you
+
+                are quoted a different rate, and select Length of loan in number of years. Click the calculate
+
+                button to view the monthly payment. Click the reload button to clear the form. For personal
+
+                and business loans there will be a $1000.00 and $500.00 origination fees that will be included
+
+                in monthly payments. There is no origination fees for an education loan. </p>
+        </fieldset>
+        <fieldset>
+            <legend>Type of Loan</legend>
+
+            <input type="radio" name="loan" id="personal" value="personal" checked="checked">
+            <label for="personal">Personal ($1000.00 origination fee)</label><br>
+
+
+            <input type="radio" name="loan" id="business" value="business">
+            <label for="business">Business ($500.00 origination fee)</label><br>
+
+
+            <input type="radio" name="loan" id="education" value="education">
+            <label for="education">Education</label><br>
+
+
+        </fieldset>
+        <fieldset>
+            <legend>Loan Amount</legend>
+            <input id="amount" name="amount" type="text" value="" />
+            <br />
+        </fieldset>
+
+        <fieldset>
+            <legend>Yearly Interest Rate in Decimal (e.g., 8.5% = 8.5)</legend>
+            <input id="interest" name="interest" type="text" value="7.5" />
+            <br />
+        </fieldset>
+
+        <fieldset>
+            <legend>Length of the Loan in Years</legend>
+
+            <select id="loanLength" name="loanLength">
+                <option> 5 </option>
+                <option> 10 </option>
+                <option> 15 </option>
+                <option> 20 </option>
+                <option> 25 </option>
+                <option> 30 </option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Full-Time Student</legend>
+            <input type="checkbox" name="student" id="student">(get 1% rate discount)
+        </fieldset>
+
+        <fieldset>
+            <legend>Monthly Payments</legend>
+            <input type="text" id="monthlyPay" onclick="return showVal();" readonly>
+        </fieldset>
+
+        <fieldset>
+            <legend>Total Payments</legend>
+            <input type="text" id="totalPay" onclick="return showVal();" readonly>
+        </fieldset>
+
+        <button type="button" onclick="return showVal();">Calculate Monthly Payments</button>
+        <br />
+        <button type="reset" onclick="return resetForm();">Reload</button>
+        <br />
+
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>

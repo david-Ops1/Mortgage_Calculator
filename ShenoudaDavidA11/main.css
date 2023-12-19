@@ -1,0 +1,51 @@
+/*
+Author: David Shenouda   
+Date: 11/10/2021
+Assignment 11
+*/
+header {
+  font-size: 25px;
+  text-align: left;
+}
+
+html {
+  border: 1px solid seashell;
+  font-family: Lucida Calligraphy, cursive;
+  color: deepskyblue;
+  text-shadow: 2px 2px 5px deepskyblue;
+
+}
+
+button {
+  background-color: snow;
+  border: 2px solid seashell;
+  color: deepskyblue;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: snow;
+  display: inline-block;
+  font-size: 25px;
+  font-family: Lucida Calligraphy, cursive;
+  border-radius: 50px;
+  text-shadow: 2px 2px 5px deepskyblue;
+
+}
+
+fieldset {
+  background-color: snow;
+  border: 1px solid seashell;
+
+}
+
+input[type=text] {
+  padding: 0;
+  height: 30px;
+  position: relative;
+
+  outline: none;
+  border: 1px solid seashell;
+  border-color: rgba(0, 0, 0, .15);
+  background-color: snow;
+  font-size: 16px;
+  border-radius: 50px;
+}
